@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on youtube <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Assumenda autem fugit et ex.</h2>
+        <h2>Dolore vitae modi inventore nulla.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, hic.</p>
+        <input type="password" name="" id="">
+    </div>
+    <ul>
+        <li class="list-item">One</li>
+        <li class="list-item">Two</li>
+        <li class="list-item">Three</li>
+        <li class="list-item">Four</li>
+    </ul>
+    <script>
+        const title = document.getElementById("title")
+        console.log(title)
+        console.log(title.id)
+        console.log(title.className)
+        console.log(title.getAttribute("id"))        
+        console.log(title.setAttribute("class", "test"))
+
+        title.style.backgroundColor = "green"
+        title.style.padding = "15px"
+        title.style.borderRadius = "100px"
+
+        console.log(title.textContent) // gives hidden content to
+        console.log(title.innerHTML) // gives the html inside the selected attribute
+        console.log(title.innerText) // only gives visible content
+
+        const classes = document.getElementsByClassName("test") // class has been changed above
+        console.log(classes)
+
+        const query = document.querySelector("h2")
+        console.log(query)
+
+        const queryTitle = document.querySelector("#title")
+        console.log(queryTitle)
+
+        const queryClass = document.querySelector(".test")
+        console.log(queryClass)
+
+        const inputQuery = document.querySelector('input[type="password"]')
+        console.log(inputQuery)
+
+        const myList = document.querySelector("ul")
+        console.log(myList)
+
+        myList.style.backgroundColor = "green"
+
+        const list = myList.querySelector("li")
+        console.log(list)
+
+        list.style.backgroundColor = "orange"
+
+        list.innerText = "Five"
+
+        const tempLiList = document.querySelectorAll("li")
+        console.log(tempLiList) // nodelist
+
+        tempLiList[1].style.color = "orange"
+
+        const myH1 = document.querySelectorAll("h1")
+        myH1[0].style.color = "yellow"
+
+        tempLiList.forEach(function (l) {
+            l.style.backgroundColor = "red"
+        })
+
+        const tempClassList = document.getElementsByClassName("list-item")
+        console.log(tempClassList)
+
+        const myConvertedArray = Array.from(tempClassList)
+        console.log(myConvertedArray)
+
+        myConvertedArray.forEach(function(li){
+            li.style.color = "wheat"
+        })
+
+    </script>
+</body>
+</html>
