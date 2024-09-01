@@ -7,6 +7,7 @@
     "axe/forms": "off",
     "axe/text-alternatives": "off",
     "disown-opener": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "axe/parsing": "off"
   }
 }
