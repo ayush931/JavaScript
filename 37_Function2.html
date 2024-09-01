@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function 2</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+const startButton = document.getElementById("start")
+const stopButton = document.getElementById("stop")
+
+const sayHello = function(){
+    console.log("Hello World", Date.now())
+}
+
+let intervalId
+
+startButton.addEventListener("click", function(){
+    console.log("start")
+    if(!intervalId){
+        intervalId = setInterval(sayHello, 1000)
+    }
+})
+
+stopButton.addEventListener("click", function(){
+    console.log("stop")
+    clearInterval(intervalId)
+    intervalId = null
+})
+</script>
+</html>
