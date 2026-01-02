@@ -1,0 +1,42 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 0 5px black;
+    background-color: chocolate;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #dis {
+    font-size: 25px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: darksalmon;
+    color: aliceblue;
+    border: 1px solid black;
+  }

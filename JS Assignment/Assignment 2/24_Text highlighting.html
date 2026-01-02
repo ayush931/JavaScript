@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="my-paragraph">This is a sample paragraph with some long words like JavaScript, programming, and computer.</p>
+    <script>
+      const paragraph = document.getElementById("my-paragraph");
+      const words = paragraph.textContent.split(" ");
+      const longWords = words.filter(word => word.length > 8);
+      longWords.forEach(word => {
+        const span = document.createElement("span");
+        span.textContent = word;
+        span.style.backgroundColor = "yellow";
+        paragraph.innerHTML = paragraph.innerHTML.replace(word, span.outerHTML);
+      });
+    </script>
+</body>
+</html>

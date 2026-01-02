@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>What you'll learn</h2>
+	<ul id="list"></ul>
+	<button onclick="addItem()">Add Item</button>
+	
+	<script>
+		const listItems = [
+			"HTML5 and CSS3",
+			"JavaScript",
+			"Node.js",
+			"React",
+			"MongoDB",
+			"Express",
+			"APIs",
+			"Git and GitHub",
+			"Deployment"
+		];
+		let index = 0;
+		const list = document.getElementById("list");
+		
+		function addItem() {
+			if (index < listItems.length) {
+				const li = document.createElement("li");
+				li.textContent = listItems[index];
+				list.appendChild(li);
+				index++;
+			} else {
+				alert("All items have been added.");
+			}
+		}
+	</script>
+</body>
+</html>

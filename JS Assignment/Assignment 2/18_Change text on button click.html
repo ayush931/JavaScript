@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the text button on click</title>
+</head>
+<body>
+    <h1 id="heading">The most affordable learning platform</h1>
+	<button id="toggle-btn">Toggle Heading Text</button>
+
+	<script>
+		// Get the heading and button elements
+		const heading = document.getElementById("heading");
+		const toggleBtn = document.getElementById("toggle-btn");
+
+		// Set up a variable to keep track of the heading text
+		let isPWSkills = false;
+
+		// Add an event listener to the button to toggle the heading text
+		toggleBtn.addEventListener("click", function() {
+			if (isPWSkills) {
+				heading.textContent = "The most affordable learning platform";
+				isPWSkills = false;
+			} else {
+				heading.textContent = "PW Skills";
+				isPWSkills = true;
+			}
+		});
+	</script>
+</body>
+</html>
